@@ -1,7 +1,7 @@
 $(document).ready(()=>{
     console.log("Running...")
     if(window.location.hash===""){
-        document.getElementsByClassName("loading-text")[0].innerHTML = "折跃异常，正在返回安全星系<dot>...</dot>"
+        document.getElementsByClassName("loading-text")[0].innerHTML = "安全警告，侦测到异常折跃，正在返回折跃点<dot>...</dot>"
         setTimeout(()=>{
             window.location.href = "https://blog.starysky.top"
         },5000)
