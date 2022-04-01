@@ -31,8 +31,6 @@ $(document).ready(()=>{
             }    
             else {
                 window.history.back(-1);
-            }
-            else {
                 window.opener=null;
                 window.open('','_self');
                 window.close();
