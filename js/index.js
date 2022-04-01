@@ -3,7 +3,7 @@ $(document).ready(()=>{
     if(window.location.hash===""){
         document.getElementsByClassName("loading-text")[0].innerHTML = "参数错误，将跳转回青云工作室<dot>...</dot>"
         setTimeout(()=>{
-            window.location.href = "https://qystudio.ltd/"
+            window.location.href = "https://blog.starysky.top"
         },5000)
         return;
     }
@@ -14,13 +14,13 @@ $(document).ready(()=>{
     referrer = referrer===undefined?"":referrer.split('.')
     if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="qystudio.ltd" || document.referrer===""){
         swal.fire({
-            title: "确定访问？",
-            text: "该网址不属于青云工作室，你确定要打开"+link+"吗？",
+            title: "时空折跃提示",
+            text: "旅行者，你即将离开小U的星系团，折跃即将开始，确定前往"+link+"吗？",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "确定",
-            cancelButtonText: "取消",
+            confirmButtonText: "Confirm",
+            cancelButtonText: "Cancel",
           }).then(function(isConfirm){
             console.log(isConfirm)
             if (isConfirm) {
