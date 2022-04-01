@@ -30,12 +30,9 @@ $(document).ready(()=>{
                 },3000)
             }    
             else {
-                setTimeout(()=>{
-                    window.location.href = "https://blog.starysky.top"
-                },3000)
-                //window.opener=null;
-                //window.open('','_self');
-                //window.close();
+                window.opener=null;
+                window.open('','_self');
+                window.close();
                 /* 微信浏览器关闭 */ 
                 WeixinJSBridge.call('closeWindow');
             }
