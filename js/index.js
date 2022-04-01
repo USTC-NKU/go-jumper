@@ -15,7 +15,7 @@ $(document).ready(()=>{
     if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="blog.starysky.top" || document.referrer===""){
         swal.fire({
             title: "时空折跃提示",
-            text: "旅行者，"<br>"你即将离开小U的星系团，折跃即将开始，确定前往"+link+"吗？",
+            text: "旅行者，你即将离开小U的星系团，折跃即将开始，请最终确权",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -30,10 +30,12 @@ $(document).ready(()=>{
                 },3000)
             }    
             else {
-                history.back();
-                //window.opener=null;
-                //window.open('','_self');
-                //window.close();
+                window.history.back(-1);
+            }
+            else {
+                window.opener=null;
+                window.open('','_self');
+                window.close();
                 /* 微信浏览器关闭 */ 
                 WeixinJSBridge.call('closeWindow');
             }
