@@ -1,7 +1,7 @@
 $(document).ready(()=>{
     console.log("Running...")
     if(window.location.hash===""){
-        document.getElementsByClassName("loading-text")[0].innerHTML = "参数错误，将跳转回青云工作室<dot>...</dot>"
+        document.getElementsByClassName("loading-text")[0].innerHTML = "折跃异常，正在返回安全星系<dot>...</dot>"
         setTimeout(()=>{
             window.location.href = "https://blog.starysky.top"
         },5000)
@@ -12,7 +12,7 @@ $(document).ready(()=>{
     let link = window.atob(base64[1])
     let referrer = document.referrer.split('/')[2];
     referrer = referrer===undefined?"":referrer.split('.')
-    if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="qystudio.ltd" || document.referrer===""){
+    if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="blog.starysky.top" || document.referrer===""){
         swal.fire({
             title: "时空折跃提示",
             text: "旅行者，你即将离开小U的星系团，折跃即将开始，确定前往"+link+"吗？",
