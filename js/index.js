@@ -15,7 +15,7 @@ $(document).ready(()=>{
     if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="blog.starysky.top" || document.referrer===""){
         swal.fire({
             title: "时空折跃提示",
-            text: "旅行者，你即将离开小U的星系团，折跃即将开始，请最终确权",
+            text: "旅行者，你即将离开小U星系团，请最终确权开启折跃",
             type: "warning",
             showCancelButton: false,
             confirmButtonColor: "#DD6B55",
