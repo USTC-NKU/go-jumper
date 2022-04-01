@@ -11,7 +11,7 @@ async function checkLink(){
         //如果你的博客添加了Gitter聊天窗，请去掉下方注释
         if(link[i].href==="" /*|| link[i].className==="gitter-open-chat-button"*/)continue;
         if(!await checkLocalSite(link[i].href)){
-            link[i].href = "https://go-jumper-qkxqwqux5-ustc-nku.vercel.app/"+window.btoa(link[i].href)
+            link[i].href = "https://go-jumper-mu.vercel.app/#"+window.btoa(link[i].href)
             //console.log("edit.")
         }
     }
@@ -27,7 +27,7 @@ async function checkLocalSite(url){
             check: (/*domain[domain.length-3]+'.'+*/domain[domain.length-2]+'.'+domain[domain.length-1]).split('/')[0],
             original: domain
         }
-        console.log(domain)
+        //console.log(domain)
         if(domain.check==="blog.starysky.top" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
         //if(domain.indexOf("qystudio.ltd") > 0 || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
         return false;
