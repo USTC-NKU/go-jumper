@@ -19,8 +19,8 @@ $(document).ready(()=>{
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Confirm",
-            cancelButtonText: "Cancel",
+            confirmButtonText: "开启折跃",
+            cancelButtonText: "取消折跃",
           }).then(function(isConfirm){
             console.log(isConfirm)
             if (isConfirm) {
