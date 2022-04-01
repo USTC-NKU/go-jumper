@@ -22,7 +22,7 @@ $(document).ready(()=>{
             confirmButtonText: "开启折跃",
             cancelButtonText: "取消折跃",
           }).then(function(isConfirm){
-            console.log(isConfirm)
+            console.log(isConfirm);
             if (isConfirm) {
                 console.log('setTimeout')
                 setTimeout(function(){
