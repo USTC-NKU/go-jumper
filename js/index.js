@@ -17,7 +17,7 @@ $(document).ready(()=>{
             title: "时空折跃提示",
             text: "旅行者，你即将离开小U的星系团，折跃即将开始，请最终确权",
             type: "warning",
-            showCancelButton: true,
+            showCancelButton: false,
             confirmButtonColor: "#DD6B55",
             confirmButtonText: "开启折跃",
             cancelButtonText: "取消折跃",
