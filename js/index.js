@@ -30,7 +30,6 @@ $(document).ready(()=>{
                 },3000)
             }    
             else {
-                window.history.back(-1);
                 window.opener=null;
                 window.open('','_self');
                 window.close();
