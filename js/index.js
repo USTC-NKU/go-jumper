@@ -17,7 +17,7 @@ $(document).ready(()=>{
             title: "时空折跃提示",
             text: "旅行者，欢迎来到折跃门，请最终确权开启折跃",
             type: "warning",
-            showCancelButton: true,
+            showCancelButton: false,
             confirmButtonColor: "#DD6B55",
             confirmButtonText: "开启折跃",
             cancelButtonText: "取消折跃",
@@ -30,9 +30,6 @@ $(document).ready(()=>{
                 },3000)
             }    
             else {
-                setTimeout(function(){
-                    window.location.href = link
-                },3000)
                 window.opener=null;
                 window.open('','_self');
                 window.close();
