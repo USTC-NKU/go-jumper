@@ -23,19 +23,26 @@ $(document).ready(()=>{
             cancelButtonText: "取消折跃",
           }).then(function(isConfirm){
             console.log(isConfirm);
-            if (isConfirm) {
-                console.log('setTimeout')
-                setTimeout(function(){
-                    window.location.href = link
-                },3000)
-            }    
-            else {
+            if(!isConfirm) {
                 window.opener=null;
                 window.open('','_self');
                 window.close();
                 /* 微信浏览器关闭 */ 
                 WeixinJSBridge.call('closeWindow');
             }
+            else if (isConfirm) {
+                console.log('setTimeout')
+                setTimeout(function(){
+                    window.location.href = link
+                },3000)
+            }    
+//             else {
+//                 window.opener=null;
+//                 window.open('','_self');
+//                 window.close();
+//                 /* 微信浏览器关闭 */ 
+//                 WeixinJSBridge.call('closeWindow');
+//             }
         })
     }else{
         setTimeout(function(){
