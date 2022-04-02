@@ -12,7 +12,7 @@ $(document).ready(()=>{
     let link = window.atob(base64[1])
     let referrer = document.referrer.split('/')[2];
     referrer = referrer===undefined?"":referrer.split('.')
-    if(referrer[referrer.length-3]+'.'+referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="blog.starysky.top" || document.referrer===""){
+    if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="starysky.top" || document.referrer===""){
         swal.fire({
             title: "时空折跃提示",
             text: "旅行者，欢迎来到折跃门，请最终确权开启折跃",
