@@ -23,7 +23,7 @@ $(document).ready(()=>{
             cancelButtonText: "取消折跃",
           }).then(function(isConfirm){
             console.log(isConfirm);
-            if (isConfirm==true) {
+            if (isConfirm) {
                 console.log('setTimeout')
                 setTimeout(function(){
                     window.location.href = link
