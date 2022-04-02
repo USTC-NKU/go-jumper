@@ -24,25 +24,26 @@ $(document).ready(()=>{
           }).then(function(isConfirm){
             console.log(isConfirm);
             if(!isConfirm) {
+                history.back(-1);
                 window.opener=null;
                 window.open('','_self');
                 window.close();
                 /* 微信浏览器关闭 */ 
                 WeixinJSBridge.call('closeWindow');
             }
-            else if (isConfirm) {
+            if (isConfirm) {
                 console.log('setTimeout')
                 setTimeout(function(){
                     window.location.href = link
                 },3000)
             }    
-//             else {
-//                 window.opener=null;
-//                 window.open('','_self');
-//                 window.close();
-//                 /* 微信浏览器关闭 */ 
-//                 WeixinJSBridge.call('closeWindow');
-//             }
+            else {
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+                /* 微信浏览器关闭 */ 
+                WeixinJSBridge.call('closeWindow');
+            }
         })
     }else{
         setTimeout(function(){
